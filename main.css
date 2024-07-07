@@ -1,0 +1,414 @@
+:root {
+    --PrimaryColor: hsl(120, 66%, 34%);
+    --SecondaryColor: hsl(145, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(136, 41%, 61%), hsl(126, 57%, 54%)); 
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+    --cardHover: rgb(245, 245, 245);
+
+    --darkPrimaryColor: hsl(210, 16%, 22%);
+    --darkSecondaryColor: hsl(145, 85%, 43%);
+    --darkTextColor: hsl(0, 0%, 93%);
+    --darkGreyText: rgb(120, 120, 120);
+    --darkInputColor: rgb(50, 50, 50);
+    --darkCardBG: rgb(40, 40, 40);
+    --darkCardHover: rgb(60, 60, 60);
+}
+
+
+.main.container.section {
+    padding: 2rem;
+}
+
+.dark-mode .main.container.section {
+    background: var(--darkInputColor);
+    color: var(--darkTextColor);
+}
+
+.secTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.secTitle .title {
+    position: relative;
+    width: max-content;
+    color: var(--textColor);
+    margin: 1rem 0;
+    z-index: 2; 
+}
+
+.secTitle .title::after {
+    position: absolute;
+    content: '';
+    background: var(--SecondaryColor);
+    height: 5px;
+    width: 120px;
+    right: 0;
+    bottom: -1px;
+}
+
+
+.visibilitySettings {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.visibilitySettings label {
+    margin: 0 1rem;
+}
+
+.secContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.singleDestination {
+    display: grid;
+    row-gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    background: var(--cardBG);
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    
+}
+
+
+
+.singleDestination:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.cardInfo {
+    padding: 1rem;
+}
+
+.cardInfo .destTitle {
+    color: var(--blackColor);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.cardInfo .continent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cardInfo .continent .icon {
+    color: var(--textColor);
+    font-size: 18px;
+}
+
+.cardInfo .continent .name {
+    color: var(--textColor);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.cardInfo .fees {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-top: 1.5px solid var(--greyText);
+    border-bottom: 1.5px solid var(--greyText);
+}
+
+.cardInfo .fees .grade {
+    color: var(--textColor);
+    max-width: 100px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardInfo .fees .grade small {
+    text-align: center;
+    background: var(--gradientColor);
+    border-radius: 1rem;
+    color: var(--whiteColor);
+    padding: 1px 10px;
+    font-size: 10px;
+}
+
+.cardInfo .fees .price {
+    font-size: 2rem;
+    color: var(--blackColor);
+}
+
+.cardInfo .desc,
+.cardInfo .date {
+    font-size: 13.5px;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.cardInfo .btn {
+    margin: 1rem 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: var(--gradientColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+}
+
+.cardInfo .btn:hover {
+    background: var(--SecondaryColor);
+}
+
+.countdown-calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.countdown {
+    flex: 1;
+}
+
+.calendar {
+    flex: 1;
+}
+
+.calendar input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #b5aeae;
+    font-size: 1rem;
+}
+
+.tourDetails {
+    background: #cdc8c8;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.tourDetails h5 {
+    margin-top: 1rem;
+}
+
+.tourDetails ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tourDetails ul li {
+    margin: 0.5rem 0;
+}
+
+.tourDetails .dark-mode  {
+    background: var(--darkGreyColor);
+    color: var(--darktextColor);
+}
+
+
+.guidesSection {
+    margin-top: 2rem;
+}
+
+.guidesContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.guideCard {
+    width: 250px;
+    background: var(--cardBG);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+    overflow: hidden;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.guideImgDiv {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.guideImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.guideImgDiv:hover .guideImg {
+    transform: scale(1.1);
+}
+
+.guideInfo {
+    padding: 1rem;
+    text-align: center;
+}
+
+.guideName {
+    font-size: 1.25rem;
+    color: rgb(106, 143, 206);
+    text-decoration: underline;
+}
+
+.guideExperience {
+    font-size: 1rem;
+    color: var(--textColor);
+    margin: 0.5rem 0;
+}
+
+.guideBio {
+    font-size: 0.875rem;
+    color: var(--textColor);
+}
+
+.guideLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.guideLink:hover {
+    transform: translateY(-5px);
+}
+
+.showDetailsButton {
+    margin-top: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: var(--gradientColor);
+    color: var(--whiteColor);
+    border: none;
+}
+
+.showDetailsButton:hover {
+    background: var(--SecondaryColor);
+}
+
+
+
+.main.container.section {
+    padding: 2rem;
+}
+
+.filterSortSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+
+
+.imgDiv {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imgDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imgDiv:hover img {
+    transform: scale(1.1);
+}
+
+.cardInfo .fees .grade small {
+    text-align: center;
+    background: var(--gradientColor);
+    border-radius: 1rem;
+    color: var(--whiteColor);
+    padding: 1px 10px;
+    font-size: 10px;
+}
+
+.cardInfo .fees .price {
+    font-size: 2rem;
+    color: var(--blackColor);
+}
+
+.cardInfo .desc,
+.cardInfo .date {
+    font-size: 13.5px;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.cardInfo .btn {
+    margin: 1rem 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: var(--gradientColor);
+    color: var(--whiteColor);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+}
+
+.cardInfo .btn:hover {
+    background: var(--SecondaryColor);
+}
+
+.countdown-calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.countdown {
+    flex: 1;
+}
+
+.calendar {
+    flex: 1;
+}
+
+.calendar input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+

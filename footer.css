@@ -1,0 +1,234 @@
+:root {
+  --PrimaryColor: hsl(120, 66%, 34%); 
+  --SecondaryColor: hsl(145, 85%, 43%); 
+  --gradientColor: linear-gradient(to right, hsl(136, 41%, 61%), hsl(126, 57%, 54%)); 
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --cardHover: rgb(245, 245, 245);
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+.backgroundDiv {
+  background-image: url('../../Assets/background.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%; 
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8; 
+}
+
+.secContent {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.contactDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactDiv .text small {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--whiteColor);
+}
+
+
+.contactDiv .inputDiv {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.contactDiv .inputDiv input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 3rem;
+  border: 1px solid var(--whiteColor);
+  outline: none;
+  background: transparent;
+  color: var(--whiteColor);
+}
+
+.contactDiv .inputDiv input::placeholder {
+  color: var(--whiteColor);
+  opacity: 0.5;
+}
+
+.contactDiv .inputDiv .btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--whiteColor);
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.contactDiv .inputDiv .btn .icon {
+  font-size: 18px;
+}
+
+.footerCard {
+  position: relative;
+  padding: 1rem 1rem 4rem;
+  gap: 2rem; 
+  border-radius: 1rem; 
+  background: var(--bodyColor);
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start; 
+  overflow: hidden; 
+}
+
+.footerCard .footerIntro {
+  flex-basis: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  flex-direction: column;
+  row-gap: 0.5rem; 
+}
+
+.footerCard .footerIntro .logoDiv .logo {
+  display: flex;
+  align-items: center;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+
+.footerCard .footerIntro .logoDiv .logo img.icon {
+  width: 20px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+
+.footerCard .footerIntro .footerParagraph {
+  font-size: 13px; 
+  color: var(--textColor);
+}
+
+.footerCard .footerIntro .footerSocials {
+  display: flex;
+  column-gap: 0.5rem; 
+}
+
+.footerCard .footerIntro .footerSocials .icon {
+  color: var(--blackColor); 
+  font-size: 20px; 
+  transition: color 0.3s ease-in-out;
+}
+
+.footerCard .footerIntro .footerSocials .icon:hover {
+  color: var(--PrimaryColor); 
+}
+
+.footerCard .footerLinks {
+  display: grid;
+  flex-basis: 50%;
+  width: 100%; 
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+.footerCard .footerLinks .linkGroup .groupTitle {
+  display: block;
+  font-weight: 600;
+  color: var(--blackColor);
+  margin-bottom: 0.5rem;
+}
+
+.footerCard .footerLinks .linkGroup .footerList {
+  font-size: 15px;
+  color: var(--textColor);
+  transition: color 0.3s ease-in-out;
+}
+
+.footerDiv {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--SecondaryColor);
+  padding: 0.5rem 2rem;
+}
+
+.footerDiv small {
+  font-size: 10px;
+  color: var(--whiteColor); 
+}
+
+@media screen and (min-width: 500px) {
+  .footer{
+    .secContent {
+      .footCard{
+        .footerLinks{
+          grid-template-columns: repeat(3,1fr);
+          padding-bottom: 1rem;
+        }
+
+        .footDiv{
+          justify-content: space-between;
+          flex-direction: row;
+
+
+          small {
+            font-size: 14px; 
+            color: var(--whiteColor); 
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .footer{
+    .secContent {
+      .contactDiv {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .inputDiv {
+          width: max-content;
+          flex-direction: row;
+          justify-content: flex-start;
+
+          input {
+            width: 60%;
+          }
+
+          .btn{ 
+            width: max-content;
+          }
+        }
+      }
+    }
+  }
+}
